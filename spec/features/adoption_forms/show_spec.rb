@@ -19,8 +19,7 @@ describe 'Pet adoption application show page', type: :feature do
   end
 
   it 'has a search bar for pets' do
-    pet = create(:pet, name: "Fluffy")
-    expect(page).not_to have_content(pet.name)
+    @pet = create(:pet, name: "Fluffy")
 
     fill_in :search, with: "flu"
     click_on "Search"
@@ -40,5 +39,6 @@ describe 'Pet adoption application show page', type: :feature do
     expect(current_path). to eq(adoption_form_path(@form))
     expect(page).to have_content("Pets on this application:\n#{fluffy.name}")
     expect(@form.pets).to eq([fluffy])
+    expect(page).to have_content(@pet.name)
   end
 end
