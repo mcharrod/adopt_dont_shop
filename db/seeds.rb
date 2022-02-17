@@ -16,3 +16,22 @@ spike = rainbow.pets.find_or_create_by!(name: "Spike",
                                         breed: "Pitbull-Lab",
                                         adoptable: true
                               )
+
+spot = rainbow.pets.find_or_create_by!(name: "Spot",
+                                      age: 4,
+                                      breed: "Dalmation",
+                                      adoptable: true
+                              )
+
+
+dixie = rainbow.pets.find_or_create_by!(name: "Windixie",
+                                        age: 6,
+                                        breed: "Chihuahua",
+                                        adoptable: true
+                              )
+
+charlie = rainbow.pets.find_or_create_by!(name: "Charlie",
+                                        age: 7,
+                                        breed: "Hounddog",
+                                        adoptable: true
+                              )
