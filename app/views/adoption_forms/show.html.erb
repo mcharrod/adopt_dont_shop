@@ -7,7 +7,8 @@
 <% if @pet_form.pets.present? %>
   <p>Pets on this application: </p>
   <% @pet_form.pets.each do |pet| %>
-    <%= pet.name %>
+    <h3><%= pet.name %></h3>
+    <%= button_to "Remove", "/adoption_forms/#{@pet_form.id}/pets/#{pet.id}", method: :delete, local: true %>
   <% end %>
 <% end %>
 
